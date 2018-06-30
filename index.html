@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carter Joseph Moorse</title>
+        <link type="text/css" rel="stylesheet" href="css/styles.css" />
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" />
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="title-container" href="#">
+                <div class="title">Carter Joseph Moorse</div>
+            </a>
+            <div class="button-container" id ="button-container">
+                <a class="button" href="#about-contents" id="about" selected="true">About me</a>
+                <a class="button" href="#project-contents" id="projects" selected="false">Projects</a>
+                <a class="button" href="#contact-contents" id="contact" selected="false">Contact me</a>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="about-contents" id="about-contents">
+                <div class="profile-container">
+                    <div class="profile">
+                        <img class="headicon" src="F:\Pictures\AG_jKM0f.jpg" />
+                        <p class="description">Portrait photo by Alex Moorse</p>
+                    </div>
+                </div>
+                <div class="heading-container">
+                    <h1>Introduction<span id="type">_</span></h1>
+                    <p class="description">My name is Carter Joseph Moorse. I am a recent (2018) graduating student from Truro College, with an Extended Diploma in IT & Computers (Software). I enjoy programming, designing and working within a team to produce Computer software related tasks and logics.</p>
+                </div>
+                <div class="heading-container">
+                    <h1>Education<span id="type">_</span></h1>
+                    <p class="description">From Truro College. I have picked up alot of different mixed skills from modules on the course. This has allowed me to delve into different areas and open new possibilitys for different techniques and tools I might need to use in the future.</p>
+                </div>
+                <div class="heading-container">
+                    <h1>Interests<span id="type">_</span></h1>
+                    <p class="description">I am fascinated with creating an interface that can be universally used without having and issues or confusion. This is fuelled by my interest within graphic design and creating different application on the web and within C#.</p>
+                </div>
+            </div>
+            
+            <div class="seperator"></div>
+            
+            <div class="project-contents" id="project-contents">
+                <div class="center">
+                    <div class="heading-container">
+                        <div class="image-container">
+                            <div class="example image1"></div>
+                        </div>
+                        <h1>Alex Moorse Art</h1>
+                        <p class="description">My dad (Alex Moorse) Is a creative artist, who takes pride in his originality and wide range of different mediums. To publicise his work, I set myself the task of creating a responsive design page that would display work, as well as an online store.</p>
+                    </div>
+                    <div class="heading-container">
+                        <div class="image-container">
+                            <div class="example image2"></div>
+                        </div>
+                        <h1>Hedgehog Database page</h1>
+                        <p class="description">For a college module, we were tasked to create a hedgehog database within MySQL and create a page within PHP to interact and change the data on the database. This project allowed me to develop my skills within increasing the security on forms using validation and escaping commands.</p>
+                    </div>
+                    <div class="heading-container">
+                        <div class="image-container">
+                            <div class="example image3"></div>
+                        </div>
+                        <h1>Games database Java</h1>
+                        <p class="description">For another college module, we used Java to develop different object oriented programs; one of which was a games sale database. Using classes, abstract classes, and interfaces to combine to create a working application.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="seperator"></div>
+            
+            <div class="contact-contents" id="contact-contents">
+                <div class="heading-container">
+                    <h1>Email</h1>
+                    <a class="description" id="email" data-clipboard-text="cartermoorse@yahoo.co.uk">cartermoorse@yahoo.co.uk
+                        <div class="tooltip" id="emailtooltip">Click to copy Email</div>
+                    </a>
+                    <h1>Phone contact</h1>
+                    <a class="description">07454 487178</a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/pagescript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script>
+    var emailLink = document.getElementById('email');
+    var clipboard = new ClipboardJS(emailLink);
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+    </script>
+</html>
