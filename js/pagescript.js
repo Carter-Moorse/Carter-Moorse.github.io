@@ -1,55 +1,27 @@
-var buttonContainer = document.getElementById("button-container");
-var buttons = [
-    document.getElementById("about"), 
-    document.getElementById("projects"), 
-    document.getElementById("contact")
-];
-var main = document.getElementById("main");
-var email = document.getElementById("email");
+let links = document.getElementsByClassName('profile-links')[0];
+let container = document.getElementsByClassName('right')[0];
 
-function changeSelection(index, type){
-    buttons.forEach(function(element){
-        element.setAttribute("selected", "false")
-    })
-    buttons[index].setAttribute("selected", type)
+function inView(element, link) {
+    let windowHeight = window.innerHeight;
+    let sizing = element.getBoundingClientRect();
+    let bottom = sizing.top + sizing.height;
+
+    if (bottom < windowHeight && bottom > 0) {
+        link.classList.add('active');
+    }
+    else {
+        if (link.classList.contains('active')) link.classList.remove('active');
+    }
 }
-function isSelected(){
-    buttons.forEach(function(element){
-        if(element.getAttribute("selected") == "true"){
-            element.style.background = "rgba(255, 255, 255, 0.3)";
-        }
-        else {
-            element.style.background = "rgba(255, 255, 255, 0)";
-        }
+
+function activateLinks(linkWrapper, search){
+    linkWrapper.querySelectorAll('a').forEach((e)=>{
+        let id = e.getAttribute('href');
+        inView(search.querySelector(id), e);
     });
 }
 
-window.onload = function(){
-    isSelected();
-    buttons[0].addEventListener("click", function(){
-        changeSelection(0, "true");
-        isSelected();});
-    buttons[1].addEventListener("click", function(){
-        changeSelection(1, "true");
-        isSelected();});
-    buttons[2].addEventListener("click", function(){
-        changeSelection(2, "true");
-        isSelected();});
-    email.addEventListener("click", function(){
-        document.getElementById("emailtooltip").innerHTML = "Copied!";
-    });
-    main.addEventListener("scroll", function(){
-        if (main.scrollTop > 0 && main.scrollTop <= 400) {
-            changeSelection(0, "true");
-            isSelected();
-        }
-        else if (main.scrollTop > 800 && main.scrollTop <= 1400){
-            changeSelection(1, "true");
-            isSelected();
-        }
-        else if (main.scrollTop > 1450){
-            changeSelection(2, "true");
-            isSelected();
-        }
-    });
-};
+activateLinks(links, container);
+
+window.addEventListener('resize', (e)=>{activateLinks(links, container)});
+container.addEventListener('scroll', (e)=>{activateLinks(links, container)});
