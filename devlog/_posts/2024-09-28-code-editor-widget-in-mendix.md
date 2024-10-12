@@ -1,5 +1,6 @@
-Mendix widgets are built using React - a JavaScript framework. A beginner friendly starting point can easily be generated using the Mendix build tools.
 Building a widget can be a fairly straight-forward process, but as I discovered with this scenario - it can quickly become tricky due to a minified 'black-box' of what Mendix does in the background.
+
+Mendix widgets are built using React - a JavaScript framework. A beginner friendly starting point can easily be generated using the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget).
 
 <img alt="Ace editor in Safari browser showing Mendix app" src="/assets/img/Screenshot-CodeEditorInBrowserAutoCompletion.png" width="100%" />
 
@@ -668,6 +669,14 @@ config.set("themePath", CodeEditor.basePath);
 ```
 
 ## Testing the widget works
-As you can see, now we have a working code editor in Mendix.
+As you can see, now we have a working code editor in Mendix...
+
+<img alt="Ace editor in Safari browser showing Mendix app" src="/assets/img/Screenshot-CodeEditorInBrowserAutoCompletion.png" width="100%" />
+
+We can see in the developer tools where the library files are being located...
+
+<img alt="Temp folder with Ace library output" src="/assets/img/Screenshot-CodeEditorInBrowserWithScriptsLoaded.png" width="100%" />
 
 Any properties we change in Mendix are reflects what loads in the Mendix app.
+
+To get the source code for the full project, go to the [GitHub repo](https://github.com/Carter-Moorse/Mendix-CodeEditor). Thanks for reading!
