@@ -11,9 +11,10 @@ footer: 'personal <a href="https://github.com/Carter-Moorse">github</a>'
 google_analytics: null
 
 # Build settings
-theme: jekyll-theme-console
+remote_theme: b2a3e8/jekyll-theme-console@v0.3.12
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 markdown: kramdown
 highlighter: rouge
