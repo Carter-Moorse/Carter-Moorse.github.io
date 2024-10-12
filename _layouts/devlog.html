@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{%- assign allPosts = site.posts | where: "categories", "devlog" -%}
+
+{%- if allPosts.size > 0 -%}
+  <ul>
+    {%- for post in allPosts -%}
+    <li>
+      {%- assign date_format = "%a, %b %d, %y" -%}
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><small> - {{ post.date | date: date_format }}</small>
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
