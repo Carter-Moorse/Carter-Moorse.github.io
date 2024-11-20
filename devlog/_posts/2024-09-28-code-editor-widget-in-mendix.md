@@ -451,4 +451,4 @@ We can see in the developer tools where the library files are being located...
 
 Any properties we change in Mendix are reflects what loads in the Mendix app.
 
-To get the source code for the full project, go to the [GitHub repo](https://github.com/Carter-Moorse/Mendix-CodeEditor). Thanks for reading!
+To get the source code for the full project, go to the [Mendix-CodeEditor GitHub repo](https://github.com/Carter-Moorse/Mendix-CodeEditor). Thanks for reading!
