@@ -20,6 +20,7 @@ sequenceDiagram
 
   Client->>Braintree server: I've completed checkout flow
   Braintree server-->>Client: Here's your Payment method nonce
+  note over Client,Braintree server: Could be success or error
 
   Client->>Mendix app: Here's my Payment method nonce
   note over Mendix app: Generate transaction<br/>request
