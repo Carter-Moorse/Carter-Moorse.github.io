@@ -33,6 +33,6 @@ Braintree also has a ['How it works'](https://developer.paypal.com/braintree/doc
 
 *In the screenshot below, you can see the Braintree drop-in JavaScript library implemented as a Mendix Widget, rendered in an app.*
 
-<img alt="Ace editor in Safari browser showing Mendix app" src="/assets/img/Screenshot-BraintreeDropInWidget.png" width="100%" />
+<img alt="Braintree web-drop-in JavaScript library rendered in the client of a Mendix app" src="/assets/img/Screenshot-BraintreeDropInWidget.png" width="100%" />
 
 You can find the source code for the front-end web-drop-in widget in the [Mendix-BraintreeDropIn GitHub repo](https://github.com/shelterbox/Mendix-BraintreeDropIn). Thanks for reading!
